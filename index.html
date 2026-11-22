@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Draw parametric light trails by adjusting two oscillation frequencies and their phase offset.">
+  <title>Lissajous Phase Canvas</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<main>
+  <div class="heading">
+    <div><h1>Lissajous Phase Canvas</h1><p>Draw parametric light trails by adjusting two oscillation frequencies and their phase offset.</p></div>
+    <a href="https://github.com/netcodermike/lissajous-phase-canvas">Project source ↗</a>
+  </div>
+  <div class="workspace">
+    <section class="panel stage" aria-label="Project workspace">
+      <canvas width="760" height="440" aria-label="Colored Lissajous curve"></canvas>
+      <p id="reading" role="status"></p>
+    </section>
+    <section class="panel controls" aria-label="Controls">
+      <form id="settings"><label for="x-rate">Horizontal frequency<output id="x-rate-value" for="x-rate"></output><input id="x-rate" type="range" min="1" max="9" step="1" value="5"></label><label for="y-rate">Vertical frequency<output id="y-rate-value" for="y-rate"></output><input id="y-rate" type="range" min="1" max="9" step="1" value="3"></label><label for="phase">Phase offset<output id="phase-value" for="phase"></output><input id="phase" type="range" min="0" max="360" step="1" value="36"></label><button id="save" type="button">Download PNG</button><p>Matching frequencies form a line or ellipse. Unequal frequencies create lobes.</p></form>
+    </section>
+  </div>
+</main>
+</body>
+</html>
